@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/styles/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="register.js" defer></script>
 </head>
 <body>
-    <h1>Holanda</h1>
+    <main>
+        <div class="form-container">
+            <div class="top">
+                <h1>Crea tu cuenta en Kolog-7</h1>
+            <button class="social-btn"><i class="fa-brands fa-google"></i> Crea tu cuenta con Google</button>
+            <button class="social-btn"><i class="fa-brands fa-facebook-f"></i> Crea tu cuenta con Facebook</button>
+            </div>
+            <form id="register-form">
+                <label for="email" class="sr-only">Email</label>
+                <input type="text" name="email" id="email" placeholder="Correo electrónico" required>
+                <label for="username" class="sr-only">Username</label>
+                <input type="text" name="username" id="username" placeholder="Usuario" required>
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" name="password" id="password" placeholder="****************" required>
+                <label for="confirm-password" class="sr-only">Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="****************" >
+                <h3>Fecha de nacimiento</h3>
+                <div class="fecha-nacimiento">
+                    <label for="dia" class="sr-only">Día</label>
+                    <input type="number" name="dia" id="dia" placeholder="Día" min="1" max="31">
+                    <label for="mes" class="sr-only" >Mes</label>
+                    <input type="number" name="mes" id="mes" placeholder="Mes" min="1" max="12">
+                    <label for="anio" class="sr-only">Año</label>
+                    <input type="number" name="anio" id="anio" placeholder="Año" min="1900" max="2023">
+                </div>
+                <button type="submit" class="iniciar-btn">Registrar</button>            
+                <p class="error escondido">Error al registrarse.</p>
+            </form>
+            <p>¿Ya estás registrado? <a href="/">Inicia sesión</a></p>
+        </div>
+    </main>
 </body>
 </html>

@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="login.js" defer></script>
+    <link rel="stylesheet" href="/styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="register.js" defer></script>
 </head>
 <body>
-    <h1>Holanda</h1>
+    <main>
+        <div class="form-container">
+            <div class="top">
+                <h1>Iniciar sesión en Kolog-7</h1>
+            <button class="social-btn"><i class="fa-brands fa-google"></i> Iniciar sesión con Google</button>
+            <button class="social-btn"><i class="fa-brands fa-facebook-f"></i> Iniciar sesión con Facebook</button>
+            </div>
+            <form id="login-form">
+                <label for="username" class="sr-only">Username</label>
+                <input type="text" name="username" id="username" placeholder="Usuario" required>
+                <label for="password" class="sr-only">Password</label>
+                <input type="password" name="password" id="password" placeholder="****************" required>
+                <button type="submit" class="iniciar-btn">Iniciar sesión</button>            
+                <p class="error escondido">Error al iniciar sesión</p>
+            </form>
+            <p>¿No tienes una cuenta? <a href="/register">Regístrate</a></p>
+        </div>
+        
+    </main>
 </body>
 </html>
