@@ -22,3 +22,4 @@ app.get("/register", (req, res) => res.sendFile(__dirname + "/pages/register.htm
 app.get("/home", (req, res) => res.sendFile(__dirname + "/pages/home.html"));
 app.post("/api/register", authentication.register);
 app.post("/api/login", authentication.login);
+app.get("/museo", (req, res) => res.sendFile(__dirname + "/pages/museo.html"));
