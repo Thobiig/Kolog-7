@@ -9,33 +9,61 @@ body {
     font-size: large;
 }
 
-main{
+main {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: red;
+    background-color: rgb(217, 217, 217);
     margin: 0;
 }
 
-
+.base-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
 
 .form-container {
-    width: 500px;
+    width: 600px;
     background-color: black;
     color: white;
     border-radius: 55px;
-    padding: 95px 15px;
+    padding: 50px 25px;
 }
+
+.form-container h1 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-container p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: skyblue;
+}
+
+a:hover {
+    color: blue;
+}
+
 
 .logo-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    width: 50%;
 }
-
 
 form {
     display: flex;
@@ -44,19 +72,14 @@ form {
     padding: 20px;
 }
 
-.top{
+.top {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 20px;
 }
 
-form+p,  form p{
-    text-align: center;
-    margin-top: 10px;
-}
-
-input, button{
+button {
     border-radius: 44px;
     border: unset;
     padding: 15px 30px;
@@ -64,24 +87,95 @@ input, button{
     cursor: pointer;
 }
 
-button:hover{
+/* Estilo de fecha de nacimiento */
+.nacimiento-container {
+    width: 100%;
+    margin: 0;
+}
+
+.nacimiento-container h2 {
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.select-group {
+    display: flex;
+    gap: 10px;
+}
+
+.select-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.select-wrapper select {
+    width: 100%;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border: 1px solid #c7c7c7;
+    border-radius: 9px;
+    color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 22px;
+}
+
+
+
+.datos-container {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+input {
+    margin: 10px 0;
+    width: 518px;
+    padding: 20px 20px;
+
+    background-color: #1c1c1c;
+    border: 1px solid #c7c7c7;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 22px;
+}
+
+button:hover {
     background-color: #d6cfcf;
     font-weight: bold;
 }
 
-.iniciar-btn{
+
+
+
+.iniciar-btn {
     background-color: white;
     color: black;
 
 }
 
-.error{
+
+
+/* utilidades */
+.divider {
+    width: 560px;
+    margin: 15px 20px;
+    align-items: center;
+    height: 2px;
+    background-color: #444;
+}
+
+.error {
     color: rgb(245, 94, 94);
     font-size: small;
     margin-top: 5px;
 }
 
-.escondido{
+.escondido {
     display: none;
 }
 
