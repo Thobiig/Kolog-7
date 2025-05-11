@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,11 +6,9 @@
   font-family: 'Nunito', sans-serif;
   font-size: 20px;
 }
-
 .logo h2{
   font-size: 32px;
 }
-
 .navbar ul {
   list-style: none;
   background-color: black;
@@ -24,7 +21,6 @@
   align-items: center;
 
 }
-
 .navbar a {
   color: white;
   text-decoration: none;
@@ -33,92 +29,12 @@
   align-content: space-between;
 
 }
-
 .navbar a:hover {
   background-color: rgb(66, 66, 66);
 }
-
 .navbar li {
   float: left;
 }
-
-.inicio-container {
-  display: flex;
-  flex-direction: row;
-
-}
-
-#square{
-  margin: 50px;
-  width: 650px;
-  height: 650px;
-  background: #952727;
-  flex-shrink: 0;
-  border-radius: 10%;
-}
-
-#square2{
-  margin: 50px;
-  width: 400px;
-  height: 400px;
-  background: #952727;
-  flex-shrink: 0;
-  border-radius: 10%;
-}
-
-.inicio-texto {
-  flex-shrink: 1;
-  padding: 75px;
-}
-
-.inicio-texto h2 {
-  font-size: 70px;
-  
-}
-.inicio-texto p {
-  font-size: 40px;
-  
-}
-.inicio-texto-2 h2 {
-  font-size: 85px;
-  text-align: center;
-}
-.inicio-container2 {
-  background-color: #a9a9a9;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.inicio-container2 h3 {
-  padding: 20px;
-  font-size: 42px;
-  max-width: 330px;
-  
-}
-
-.iniciob, .iniciom, .inicioa{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-
-.inicio-container3 {
-  padding: 40px;
-}
-
-.inicio-container3 h2 {
-  font-size: 65px;
-}
-
-.inicio-container3 p {
-  font-size: 40px;
-  
-}
-
 .button-17 {
   align-items: center;
   appearance: none;
@@ -153,42 +69,33 @@
   will-change: transform, opacity;
   z-index: 0;
 }
-
 .button-17:hover {
   background: #F6F9FE;
   color: #174ea6;
 }
-
 .button-17:active {
   box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
   outline: none;
 }
-
 .button-17:focus {
   outline: none;
   border: 2px solid #4285f4;
 }
-
 .button-17:not(:disabled) {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
-
 .button-17:not(:disabled):hover {
   box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
 }
-
 .button-17:not(:disabled):focus {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
-
 .button-17:not(:disabled):active {
   box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
 }
-
 .button-17:disabled {
   box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
 }
-
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -197,17 +104,14 @@
   padding: 20px 40px;
   color: rgb(0, 0, 0);
 }
-
 .main-header .logo {
   font-size: 28px;
   font-weight: bold;
 }
-
 .main-header .login {
   display: flex;
   align-items: center;
 }
-
 .main-footer {
   display: flex;
   justify-content: space-evenly;
@@ -216,14 +120,10 @@
   padding: 20px 40px;
   color: rgb(255, 255, 255);
 }
-
 .main-footer h2 {
   font-size: 35px;
   text-align: center;
 }
-
-
-
 .form button {
   border: none;
   background: none;
@@ -277,7 +177,6 @@
 .form:focus-within {
   border-radius: var(--after-border-radius);
 }
-
 input:focus {
   outline: none;
 }
@@ -303,3 +202,59 @@ input:not(:placeholder-shown) ~ .reset {
   width: 17px;
   margin-top: 3px;
 }
+
+.titulos h1{
+  font-size: 60px;
+}
+
+.button {
+  background: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 30px;
+  outline: none;
+  overflow: hidden;
+  color: rgb(0, 0, 0);
+  transition: color 0.3s 0.1s ease-out;
+  text-align: center;
+  flex-direction: row;
+}
+.container{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: space-evenly;
+}
+
+.patrimonios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.link iframe {
+    
+    width: 1200px;
+    height: 675px;
+    border-radius: 7%;
+    border: 7px solid rgb(0, 0, 0);
+}
+
+.texto-nombres h2{
+    font-size: 30px;
+    text-align: center;
+    max-width: 550px;
+}
+.descripcion{
+  max-width: 1100px;
+  text-align: center;
+}
+
