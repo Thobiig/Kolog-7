@@ -9,6 +9,17 @@ body {
     font-size: large;
 }
 
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: red;
+    margin: 0;
+}
+
+
 
 .form-container {
     width: 500px;
@@ -17,6 +28,14 @@ body {
     border-radius: 55px;
     padding: 95px 15px;
 }
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 
 form {
     display: flex;
