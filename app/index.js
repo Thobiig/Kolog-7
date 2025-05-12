@@ -17,9 +17,12 @@ app.use(express.static(__dirname + "/public"));
 
 
 //Rutas
-app.get("/", (req, res) => res.sendFile(__dirname + "/pages/login.html"));
+app.get("/", (req, res) => res.sendFile(__dirname + "/pages/home.html"));
 app.get("/register", (req, res) => res.sendFile(__dirname + "/pages/register.html"));
-app.get("/home", (req, res) => res.sendFile(__dirname + "/pages/home.html"));
+app.get("/login", (req, res) => res.sendFile(__dirname + "/pages/login.html"));
+app.get("/museo", (req, res) => res.sendFile(__dirname + "/pages/museo.html"));
 app.post("/api/register", authentication.register);
 app.post("/api/login", authentication.login);
-app.get("/museo", (req, res) => res.sendFile(__dirname + "/pages/museo.html"));
+app.use((req, res) => {
+    res.status(404).sendFile(__dirname + "/pages/error.html");
+});
