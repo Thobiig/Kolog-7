@@ -1,14 +1,3 @@
-body {
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100svh;
-    font-size: large;
-}
-
 main {
     display: flex;
     flex-direction: row;
@@ -18,7 +7,6 @@ main {
     height: 100vh;
     background-color: rgb(217, 217, 217);
     margin: 0;
-
 }
 
 .social-btn{
@@ -82,7 +70,7 @@ a:hover {
     color: blue;
 }
 
-form {
+.form-login {
     display: flex;
     flex-direction: column;
     gap: 10px;

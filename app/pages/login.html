@@ -7,18 +7,21 @@
     <title>Login</title>
     <link rel="stylesheet" href="/styles/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles/base.css">
     <script src="register.js" defer></script>
+    <script src="base.js" defer></script>
 </head>
 
 <body>
+    <!---  Inicio de la página -->
     <main>
         <div class="logo-container">
-                <img src="/assets/logo.png" alt="Logo Kolog-7" class="logo">
-                <h1>KOLOG-7</h1>
+            <img src="/assets/logo.png" alt="Logo Kolog-7" class="logo">
+            <h1>KOLOG-7</h1>
         </div>
 
         <div class="base-container">
-            
+
             <div class="form-container">
                 <div class="top">
                     <h1>Iniciar sesión en Kolog-7</h1>
@@ -27,22 +30,21 @@
                         Facebook</button>
                 </div>
                 <div class="divider"></div>
-                <form id="login-form">
+                <form id="login-form" class="form-login">
                     <label for="username" class="sr-only">Username</label>
-                    <input type="text" name="username" id="username" placeholder="Usuario" required>
+                    <input type="text" name="username" id="username" placeholder="Usuario" class="input-field" required>
                     <label for="password" class="sr-only">Password</label>
-                    <input type="password" name="password" id="password" placeholder="****************" required>
+                    <input type="password" name="password" id="password" placeholder="****************" class="input-field" required>
                     <button type="submit" class="iniciar-btn">Iniciar sesión</button>
                     <button type="button" class="olvidaste-btn">¿Olvidaste tu contraseña?</button>
                     <p class="error escondido">Error al iniciar sesión</p>
                 </form>
                 <p>¿No tienes una cuenta? <a href="/register">Regístrate</a></p>
             </div>
-
         </div>
 
-
     </main>
+    <!---  Fin de la página -->
 </body>
 
 </html>
