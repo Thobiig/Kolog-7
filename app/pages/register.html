@@ -1,62 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Registro - Kolog-7</title>
     <link rel="stylesheet" href="/styles/register.css">
     <link rel="stylesheet" href="/styles/base.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="register.js" defer></script>
+    <script src="/register.js" defer></script>
 </head>
 
 <body>
-    <!---  Inicio de la página -->
     <main>
         <div class="base-container">
             <div class="form-container">
                 <div class="top">
                     <h1>Crea tu cuenta en Kolog-7</h1>
-                    <button class="social-btn"><i class="fa-brands fa-google"></i> Crea tu cuenta con Google</button>
-                    <button class="social-btn"><i class="fa-brands fa-facebook-f"></i> Crea tu cuenta con
-                        Facebook</button>
+                    <button class="social-btn">
+                        <i class="fa-brands fa-google"></i> Crea tu cuenta con Google
+                    </button>
+                    <button class="social-btn">
+                        <i class="fa-brands fa-facebook-f"></i> Crea tu cuenta con Facebook
+                    </button>
                 </div>
                 <div class="divider"></div>
                 <form id="register-form">
                     <div class="datos-container">
-                        <label for="email" class="sr-only">Email</label>
-                        <input type="text" name="email" id="email" placeholder="Correo electrónico" class="input-field" required>
-                        <label for="username" class="sr-only">Username</label>
-                        <input type="text" name="username" id="username" placeholder="Usuario" class="input-field" required>
-                        <label for="password" class="sr-only">Password</label>
-                        <input type="password" name="password" id="password" placeholder="****************" required>
-                        <label for="confirm-password" class="sr-only">Confirm Password</label>
-                        <input type="password" name="confirm-password" id="confirm-password" placeholder="****************">    
+                        <label for="email" class="sr-only">Correo electrónico</label>
+                        <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Correo electrónico"
+                            class="input-field"
+                            required
+                        >
+
+                        <label for="username" class="sr-only">Nombre de usuario</label>
+                        <input
+                            type="text"
+                            name="username"
+                            id="username"
+                            placeholder="Nombre de usuario"
+                            class="input-field"
+                            required
+                        >
+
+                        <label for="password" class="sr-only">Contraseña</label>
+                        <input
+                            type="password"
+                            name="password"
+                            id="password"
+                            placeholder="Contraseña"
+                            class="input-field"
+                            required
+                        >
+
+                        <label for="confirm-password" class="sr-only">Confirmar contraseña</label>
+                        <input
+                            type="password"
+                            name="confirm-password"
+                            id="confirm-password"
+                            placeholder="Confirmar contraseña"
+                            class="input-field"
+                            required
+                        >
                     </div>
-                    
+
                     <div class="nacimiento-container">
                         <h2>Fecha de nacimiento</h2>
-
                         <div class="select-group">
-
                             <div class="select-wrapper">
-                                <select name="day" aria-label="Día">
+                                <select name="day" aria-label="Día" required>
                                     <option value="" disabled selected>Día</option>
                                     <script>
-                                        const daySelect = document.querySelector('select[name="day"]');
                                         for (let i = 1; i <= 31; i++) {
-                                            const option = document.createElement('option');
-                                            option.value = i < 10 ? `0${i}` : i;
-                                            option.textContent = i;
-                                            daySelect.appendChild(option);
+                                            document.write(`<option value="${i < 10 ? '0' + i : i}">${i}</option>`);
                                         }
                                     </script>
                                 </select>
                             </div>
-
                             <div class="select-wrapper">
-                                <select name="month" aria-label="Mes">
+                                <select name="month" aria-label="Mes" required>
                                     <option value="" disabled selected>Mes</option>
                                     <option value="01">Enero</option>
                                     <option value="02">Febrero</option>
@@ -72,39 +98,33 @@
                                     <option value="12">Diciembre</option>
                                 </select>
                             </div>
-
                             <div class="select-wrapper">
-                                <select name="year" aria-label="Año">
+                                <select name="year" aria-label="Año" required>
                                     <option value="" disabled selected>Año</option>
                                     <script>
-                                        const yearSelect = document.querySelector('select[name="year"]');
                                         const currentYear = new Date().getFullYear();
                                         for (let i = 0; i < 100; i++) {
                                             const year = currentYear - i;
-                                            const option = document.createElement('option');
-                                            option.value = year;
-                                            option.textContent = year;
-                                            yearSelect.appendChild(option);
+                                            document.write(`<option value="${year}">${year}</option>`);
                                         }
                                     </script>
                                 </select>
                             </div>
-                            
                         </div>
                     </div>
-                    <br>
+
                     <button type="submit" class="iniciar-btn">Registrar</button>
                     <p class="error escondido">Error al registrarse.</p>
                 </form>
-                <p>¿Ya estás registrado? <a href="/">Inicia sesión</a></p>
+                <p>¿Ya estás registrado? <a href="/login">Inicia sesión</a></p>
             </div>
         </div>
+
         <div class="logo-container">
             <img src="/assets/logo.png" alt="Logo Kolog-7" class="logo">
             <h1>KOLOG-7</h1>
         </div>
     </main>
-    <!---  Fin de la página -->
 </body>
 
 </html>

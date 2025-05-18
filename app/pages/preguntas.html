@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="base.js" defer></script>
+    <script src="preguntas.js" defer></script>
+</head>
+
+<body>
+
+    <header></header>
+
+
+    <main>
+        <form id="form-pregunta">
+            <input type="text" name="pregunta" placeholder="Escribe la pregunta" required>
+
+            <select name="nivel" required>
+                <option value="">Selecciona el nivel</option>
+                <option value="basico">Básico</option>
+                <option value="medio">Medio</option>
+                <option value="avanzado">Avanzado</option>
+            </select>
+
+            <div id="respuestas">
+                <input type="text" name="respuesta1" placeholder="Respuesta 1" required>
+                <input type="radio" name="correcta" value="1"> Correcta<br>
+
+                <input type="text" name="respuesta2" placeholder="Respuesta 2" required>
+                <input type="radio" name="correcta" value="2"> Correcta<br>
+
+                <input type="text" name="respuesta3" placeholder="Respuesta 3" required>
+                <input type="radio" name="correcta" value="3"> Correcta<br>
+
+                <input type="text" name="respuesta4" placeholder="Respuesta 4" required>
+                <input type="radio" name="correcta" value="4"> Correcta<br>
+            </div>
+
+            <button type="submit">Guardar pregunta</button>
+        </form>
+    </main>
+    <script>
+        
+    </script>
+
+
+    <footer></footer>
+</body>
+
+</html>
