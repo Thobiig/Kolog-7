@@ -44,8 +44,17 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     width: 50%;
+}
+
+.logo{
+    width: 150px;
+  height: 150px;
+  object-fit: cover; /* asegura que la imagen se recorte bien */
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .form-container h1 {

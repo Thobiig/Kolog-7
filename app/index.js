@@ -22,6 +22,7 @@ app.get("/", (req, res) => res.sendFile(path.join(__dirname, "pages", "home.html
 app.get("/register", (req, res) => res.sendFile(path.join(__dirname, "pages", "register.html")));
 app.get("/login", (req, res) => res.sendFile(path.join(__dirname, "pages", "login.html")));
 app.get("/museo", (req, res) => res.sendFile(path.join(__dirname, "pages", "museo.html")));
+app.get("/pruebas", (req, res) => res.sendFile(path.join(__dirname, "pages", "pruebas.html")));
 app.get("/preguntas", (req, res) => res.sendFile(path.join(__dirname, "pages", "preguntas.html")));
 
 // Rutas API

@@ -8,6 +8,15 @@ main {
     margin: 0;
 }
 
+.logo{
+    width: 150px;
+  height: 150px;
+  object-fit: cover; /* asegura que la imagen se recorte bien */
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 10px;
+}
+
 .base-container {
     width: 50%;
     display: flex;

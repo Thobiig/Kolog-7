@@ -1,7 +1,12 @@
 .inicio-container {
+  height: 90vh;
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
 
+.inicio-container h2{
+  text-align: center;
 }
 
 #square{
@@ -14,7 +19,7 @@
 }
 
 #square2{
-  margin: 50px;
+  margin: 5px;
   width: 400px;
   height: 400px;
   background: #952727;
@@ -45,6 +50,8 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  height: 60vh;
+  padding: 50px;
 }
 
 .inicio-container2 h3 {
