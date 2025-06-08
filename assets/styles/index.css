@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2vh;
+}
+
+body{
+  background-color: #333;
+}
+
+/* Texto */
+h2 {
+    font-size: 6vh;
+    font-weight: 777;
+    margin-bottom: 4vh;
+    text-align: center;
+    padding-top: 8vh;
+}
+
+h3 {
+    font-size: 3.5vh;
+    font-weight: 700;
+    padding-top: 2vh;
+}
+
+p {
+    font-size: 2.2vh;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+a{
+    font-size: 2.2vh;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 2.2vh;
+}
+
+/* Secciones */
+.inicio{
+    display: flex;
+    gap: 5vh;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 70vh;
+    background-color: #555;
+}
+
+.inicio img{
+    width: 60vh;
+    border-radius: 5vh;
+}
+
+.inicio-img{
+    width: 40%;
+}
+
+.inicio-texto{
+    width: 40%;
+}
+
+.prueba{
+    width: 100vw;
+    height: 75vh;
+}
+
+.prueba h2{
+    padding-bottom: 1.5vh;
+}
+
+.pruebas img{
+    width: 37vh;
+    border-radius: 2.7vh;
+}
+
+.nivel{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.pruebas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contexto{
+    width: 100vw;
+    height: 50vh;
+    background-color: #444;
+}
+
+.texto{
+    padding: 2vh 10vh 2vh 10vh;
+    
+}
+
+.text h2, p{
+    text-align: left;
+}
+
+.titulo{
+    text-align: left;
+    margin-top: -4vh;
+}
+
+

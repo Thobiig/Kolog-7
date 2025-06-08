@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 2vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(217, 217, 217);
+    margin: 0;
+}
+
+/* Texto */
+h2 {
+    font-size: 5vh;
+    font-weight: 600;
+    margin-bottom: 4vh;
+    text-align: center;
+    padding-top: 8vh;
+}
+
+h3 {
+    font-size: 4vh;
+    font-weight: 700;
+    padding-top: 2vh;
+}
+
+p {
+    font-size: 2.2vh;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+a{
+    font-size: 2.2vh;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 2.2vh;
+}
+
+/*Lado derecho*/
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.logo {
+    width: 25vh;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+
+
+/*Lado izquierdo*/
+.base-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.form-container {
+    height: 96vh;
+    width: 80vh;
+    background-color: black;
+    color: white;
+    border-radius: 5vh;
+}
+
+.form-container-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 96vh;
+    width: 80vh;
+    background-color: black;
+    color: white;
+    border-radius: 5vh;
+   
+} 
+
+.form-container-login h2 {
+    padding: 0;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding: 2vh;
+}
+
+
+
+.register-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;    
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;    
+}
+
+input {
+    width: 70vh;
+    background-color: #1c1c1c;
+    border: 0.2vh solid #c7c7c7;
+    border-radius: 1.5vh;
+    color: #fff;
+    font-size: 2.2vh;
+    padding: 2vh;
+}
+
+
+/* Estilo de fecha de nacimiento */
+.nacimiento-container {
+    padding: 1.5vh 0 1.5vh 0;
+    width: 70vh;
+    margin: 0;
+}
+
+.select-group {
+    display: flex;
+    gap: 1vh;
+}
+
+.select-wrapper {
+    position: relative;
+    flex: 1;
+}
+
+.select-wrapper select {
+    width: 100%;
+    padding: 2vh;
+    background-color: #1c1c1c;
+    border: 0.2vh solid #c7c7c7;
+    border-radius: 1.5vh;
+    color: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-size: 2.2vh;
+}
+
+.rol{
+    width: 70vh;
+    pad: 1vh;
+}
+
+button {
+    border-radius: 3vh;
+    border: unset;
+    padding: 1.5vh 29.7vh;
+    font-size: large;
+    cursor: pointer;
+    font-size: 2.2vh;
+    margin: 2vh 0 2vh 0;
+}
+
+.form-container-login button {
+    border-radius: 3vh;
+    border: unset;
+    padding: 1.5vh 28.7vh;
+    font-size: large;
+    cursor: pointer;
+    font-size: 2.2vh;
+    margin: 2vh 0 2vh 0;
+}
+
+/* detalles */
+a {
+    text-decoration: none;
+    color: skyblue;
+}
+
+a:hover {
+    color: blue;
+}
+
+button:hover {
+    background-color: #d6cfcf;
+    font-weight: bold;
+}
+
+.iniciar-btn {
+    background-color: white;
+    color: black;
+
+}
+
+/* utilidades */
+.error {
+    color: rgb(245, 94, 94);
+    font-size: small;
+    margin-top: 5px;
+}
+
+.escondido {
+    display: none;
+}
+
+.sr-only {
+    position: absolute;
+    left: -100000px;
+    width: 1px;
+    top: auto;
+    height: 1px;
+    overflow: hidden;
+}
