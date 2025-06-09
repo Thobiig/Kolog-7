@@ -1,23 +1,25 @@
+<?php include 'header.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="stylesheet" href="assets/styles/index.css">
+    <title>Kolog-7 - Inicio</title>
+    <link rel="stylesheet" href="../assets/styles/index_home.css">
+    <link rel="stylesheet" href="../assets/styles/header_footer.css">
     <script src="js/base.js" defer></script>
 </head>
 <body>
+
     <!---  Inicio de la página -->
     <section class="inicio">
         <div class="inicio-img">
-            <img src="assets\img\logo.png">
+            <img src="..\assets\img\logo.png">
         </div>
         <div class="inicio-texto">
             <h2>Bienvenidos a Kolog-7</h2></h2>
             <p>Conocer los patrimonios culturales, históricos y naturales de una comunidad no solo es un ejercicio de aprendizaje, sino un acto de identidad y responsabilidad. El patrimonio representa la memoria colectiva de un pueblo, sus raíces, costumbres, valores y formas de ver el mundo. A través de él, entendemos cómo vivieron nuestros antepasados, cómo evolucionaron nuestras sociedades y por qué ciertos lugares, objetos o manifestaciones son tan significativos para nuestra cultura.</p>
-            
         </div>
     </section>
 
@@ -25,15 +27,15 @@
     <h2>¡Coloca a prueba tu aprendizaje!</h2>
     <div class="pruebas">
         <div class="nivel">
-            <img src="assets\img\basico.webp">
+            <img src="..\assets\img\basico.webp">
             <h3>Prueba de nivel básico</h3>
         </div>
         <div class="nivel">
-            <img src="assets\img\medio.webp">
+            <img src="..\assets\img\medio.webp">
             <h3>Prueba de nivel medio</h3>
         </div>
         <div class="nivel">
-            <img src="assets\img\avanzado.webp">
+            <img src="..\assets\img\avanzado.webp">
             <h3>Prueba de nivel avanzado</h3>
         </div>
     </div>
@@ -57,6 +59,7 @@
 
     
     <!---  Fin de la página -->
+    <?php include 'footer.php'; ?>
 </body>
 
 </html>

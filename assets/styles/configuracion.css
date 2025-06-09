@@ -1,0 +1,54 @@
+.config-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: #fff;
+    font-family: 'Nunito', sans-serif;
+}
+
+.config-container h2 {
+    margin-bottom: 20px;
+}
+
+.config-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.config-container label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.config-container input {
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.config-container button {
+    margin-top: 25px;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #174ea6;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.config-container button:hover {
+    background-color: #0f3c85;
+}
+
+.mensaje {
+    background: #d4edda;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}

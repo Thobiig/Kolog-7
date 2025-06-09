@@ -40,12 +40,6 @@
 
 </html>
 
-
-
-
-
-
-
 <?php
 session_start();
 require 'includes/db.php';
@@ -68,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION["rol"] = $usuario["rol"];
             $_SESSION["nombre"] = $usuario["nombre"];
 
-            header("Location: dashboard.php");
+            header("Location: principal/index.php");
             exit;
         } else {
             echo "Contraseña incorrecta.";

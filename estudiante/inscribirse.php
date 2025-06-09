@@ -8,18 +8,28 @@ if ($_SESSION['rol'] !== 'estudiante') {
 }
 
 $usuario_id = $_SESSION['usuario_id'];
-$curso_id = $_POST['curso_id'];
 
-// Prevenir inscripción duplicada
-$check = $conn->prepare("SELECT * FROM inscripciones WHERE usuario_id = ? AND curso_id = ?");
-$check->bind_param("ii", $usuario_id, $curso_id);
-$check->execute();
-if ($check->get_result()->num_rows === 0) {
-    $stmt = $conn->prepare("INSERT INTO inscripciones (usuario_id, curso_id) VALUES (?, ?)");
-    $stmt->bind_param("ii", $usuario_id, $curso_id);
-    $stmt->execute();
-    echo "Inscripción exitosa.";
-} else {
-    echo "Ya estás inscrito en este curso.";
-}
+$query = $conn->prepare("
+    SELECT cursos.id, cursos.nombre, cursos.descripcion 
+    FROM cursos 
+    INNER JOIN inscripciones ON cursos.id = inscripciones.curso_id 
+    WHERE inscripciones.usuario_id = ?
+");
+$query->bind_param("i", $usuario_id);
+$query->execute();
+$result = $query->get_result();
 ?>
+
+<h2>Mis cursos</h2>
+
+<?php if ($result->num_rows === 0): ?>
+    <p>Aún no estás inscrito en ningún curso.</p>
+<?php endif; ?>
+
+<?php while ($curso = $result->fetch_assoc()): ?>
+    <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+        <h3><?= htmlspecialchars($curso['nombre']) ?></h3>
+        <p><?= htmlspecialchars($curso['descripcion']) ?></p>
+        <a href='cursos/ver_clases.php?curso_id=<?= $curso['id'] ?>'>Ver clases</a>
+    </div>
+<?php endwhile; ?>

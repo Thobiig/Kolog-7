@@ -7,19 +7,26 @@ if ($_SESSION['rol'] !== 'profesor') {
     exit;
 }
 
-if (!isset($_GET['curso_id'])) {
-    echo "Curso no especificado.";
+if (!isset($_GET['id']) || !isset($_GET['curso_id'])) {
+    echo "Clase o curso no especificado.";
     exit;
 }
 
+$clase_id = $_GET['id'];
 $curso_id = $_GET['curso_id'];
+
+$stmt = $conn->prepare("SELECT * FROM clases WHERE id = ?");
+$stmt->bind_param("i", $clase_id);
+$stmt->execute();
+$resultado = $stmt->get_result();
+$clase = $resultado->fetch_assoc();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titulo = $_POST['titulo'];
     $contenido = $_POST['contenido'];
 
-    $stmt = $conn->prepare("INSERT INTO clases (curso_id, titulo, contenido) VALUES (?, ?, ?)");
-    $stmt->bind_param("iss", $curso_id, $titulo, $contenido);
+    $stmt = $conn->prepare("UPDATE clases SET titulo = ?, contenido = ? WHERE id = ?");
+    $stmt->bind_param("ssi", $titulo, $contenido, $clase_id);
     $stmt->execute();
 
     header("Location: ver_clases.php?curso_id=" . $curso_id);
@@ -28,64 +35,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <div>
-<h2>Agregar nueva clase</h2>
+    <h2>Editar clase</h2>
 
 <form method="POST">
     <label>Título:</label><br>
-    <input type="text" name="titulo" required><br><br>
+    <input type="text" name="titulo" value="<?= htmlspecialchars($clase['titulo']) ?>" required><br><br>
 
     <label>Contenido:</label><br>
-    <textarea name="contenido" rows="6" cols="50" required></textarea><br><br>
+    <textarea name="contenido" rows="6" cols="50" required><?= htmlspecialchars($clase['contenido']) ?></textarea><br><br>
 
-        <button type="submit">Guardar clase</button>
-        <a href="../mis_cursos.php" class="btn-cancelar">Cancelar</a>
-    
+    <button type="submit">Guardar cambios</button>
+    <a href="../mis_cursos.php"><button>Cancelar</button></a>
 </form>
 </div>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-
-* {
-    font-family: 'Nunito', sans-serif;
-    box-sizing: border-box;
-}
-
-div {
+  /* Contenedor centrado con flexbox */
+  div {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
     min-height: 100vh;
     background: #f5f7fa;
-}
+    box-sizing: border-box;
+  }
 
-h2 {
+  h2 {
     margin-bottom: 30px;
     color: #333;
     text-align: center;
     width: 100%;
     max-width: 600px;
-}
+  }
 
-form {
+  form {
     width: 100%;
     max-width: 600px;
-    background: #fff;
+    background: #f9f9f9;
     padding: 25px 30px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
+    box-sizing: border-box;
+  }
 
-label {
+  label {
     font-weight: 600;
     display: block;
     margin-bottom: 6px;
     color: #444;
-}
+  }
 
-input[type="text"],
-textarea {
+  input[type="text"],
+  textarea {
     width: 100%;
     padding: 10px;
     font-size: 15px;
@@ -93,26 +95,21 @@ textarea {
     border-radius: 5px;
     resize: vertical;
     margin-bottom: 20px;
+    box-sizing: border-box;
     font-family: inherit;
     color: #333;
     transition: border-color 0.3s ease;
-}
+  }
 
-input[type="text"]:focus,
-textarea:focus {
+  input[type="text"]:focus,
+  textarea:focus {
     border-color: #3498db;
     outline: none;
     box-shadow: 0 0 6px #a3c9f9;
-}
+  }
 
-.botones {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-button[type="submit"] {
+  button[type="submit"],
+  form a > button {
     background-color: #3498db;
     color: white;
     border: none;
@@ -121,28 +118,27 @@ button[type="submit"] {
     cursor: pointer;
     font-weight: 700;
     font-size: 15px;
+    margin-right: 10px;
     transition: background-color 0.3s ease;
-}
+  }
 
-button[type="submit"]:hover {
+  button[type="submit"]:hover,
+  form a > button:hover {
     background-color: #217dbb;
-}
+  }
 
-.btn-cancelar {
-    display: inline-block;
-    background-color: #bbb;
-    color: #333;
+  form a > button {
+    background-color: #888;
+  }
+
+  form a > button:hover {
+    background-color: #555;
+  }
+
+  /* Para que el enlace con botón no se junte con submit */
+  form a {
     text-decoration: none;
-    padding: 10px 22px;
-    border-radius: 5px;
-    font-weight: 700;
-    font-size: 15px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.btn-cancelar:hover {
-    background-color: #999;
-}
-
+  }
 </style>
+
+
